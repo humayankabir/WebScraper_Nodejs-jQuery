@@ -11,3 +11,4 @@ TestResults
 packages/
 ~*
 /scraper-alpha/node_modules
+/node_modules
