@@ -1,0 +1,86 @@
+https://www.google.com/search?q=Tokyo+Imperial+Palace
+http://www.google.XXX/search?hl=en&q=%s&meta= 
+https://www.google.com/search?hl=en&q=ahsan+monjil
+
+
+From Ahad vai 
+
+Tsukiji Fish Market
+Roppongi Hills
+Tokyo Royal Palace
+Tokyo tower
+Shibuya
+Harajuku park
+Tokyo Disneyland
+Yokohama Minatomirai
+Sakuragicho
+
+"Tsukiji Fish Market",
+"Roppongi Hills",
+"Tokyo Royal Palace",
+"Tokyo Tower",
+"Shibuya",
+"Harajuku Park",
+"Tokyo Disneyland",
+"Yokohama Minatomirai",
+"Sakuragicho"
+
+Tsukiji Fish Market   https://www.google.com/search?hl=en&q=Tsukiji+Fish+Market
+Roppongi Hills   https://www.google.com/search?hl=en&q=Roppongi+Hills
+Tokyo Royal Palace   https://www.google.com/search?hl=en&q=Tokyo+Royal+Palace
+Tokyo Tower   https://www.google.com/search?hl=en&q=Tokyo+Tower
+Shibuya   https://www.google.com/search?hl=en&q=Shibuya
+Harajuku Park   https://www.google.com/search?hl=en&q=Harajuku+Park
+Tokyo Disneyland   https://www.google.com/search?hl=en&q=Tokyo+Disneyland
+Yokohama Minatomirai   https://www.google.com/search?hl=en&q=Yokohama+Minatomirai
+Sakuragicho   https://www.google.com/search?hl=en&q=Sakuragicho
+
+Example of Place names 
+https://www.google.com/search?hl=en&q=Tokyo+Royal+Palace
+Tokyo Royal Palace
+Tokyo Imperial Palace
+
+https://www.google.com/search?hl=en&q=Harajuku+Park
+Harajuku Park
+Yoyogi Park
+
+https://www.google.com/search?hl=en&q=Yokohama+Minatomirai
+Yokohama Minatomirai
+Minato Mirai 21
+
+https://www.google.com/search?hl=en&q=Sakuragicho
+Sakuragicho
+Sakuragichō Station
+
+
+Odaiba
+Sensō-ji
+Tokyo Skytree
+Tokyo Disneyland
+Harajuku
+Meiji Shrine
+Ueno Park
+Tokyo Imperial Palace
+Tokyo DisneySea
+Roppongi
+Tokyo Tower
+Tsukiji fish market
+Yoyogi Park
+Mount Takao
+Roppongi Hills
+
+"Odaiba",
+"Sensō-ji",
+"Tokyo Skytree",
+"Tokyo Disneyland",
+"Harajuku",
+"Meiji Shrine",
+"Ueno Park",
+"Tokyo Imperial Palace",
+"Tokyo DisneySea",
+"Roppongi",
+"Tokyo Tower",
+"Tsukiji fish market",
+"Yoyogi Park",
+"Mount Takao",
+"Roppongi Hills"
