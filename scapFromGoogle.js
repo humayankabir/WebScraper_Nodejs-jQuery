@@ -216,7 +216,7 @@ function ParseDataGoogle(html, index) {
     //console.log("[" + index + "] " + outObjList[index].description);
 
     console.log("[" + index + "] " + outObjList[index].i_name);
-    writeFile(outputFolder + outObjList[index].i_name + ".html", html);
+    //writeFile(outputFolder + outObjList[index].i_name + ".html", html);
     writeCsv(outputFolder + "Output.csv", outObjList);
 }
 
