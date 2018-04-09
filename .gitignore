@@ -41,3 +41,4 @@ packages/
 DashboardFramework.Tests/
 /DashbaordFramework/DashboardFramework/*.log
 /Offline-App
+/scraper-alpha/node_modules
