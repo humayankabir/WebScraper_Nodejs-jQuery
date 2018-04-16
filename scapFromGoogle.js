@@ -33,11 +33,18 @@ const targetList = [
     "Mount Takao",
     "Roppongi Hills"
 ];
+const targetList_2 = [
+    "Dhaka",
+    "Bangalore",
+    "Sydney"
+];
 const targetObj = {
     i_name: noDataSign,
     url: noDataSign,
     name: noDataSign,
 
+    target_url: noDataSign,
+    target_img: noDataSign,
     map_url: noDataSign,
     map_img: noDataSign,
 
@@ -117,8 +124,11 @@ function ParseDataGoogle(html, index) {
             outObjList[index].name = validateData(_this.find('.FSP1Dd').html());
         }
         else if (_this.hasClass('R8KuR')) {
-            outObjList[index].map_url = validateData(_this.find('a').attr('href'));
-            outObjList[index].map_img = validateData('https://www.google.com/' + _this.find('a > img').attr('src'));
+            outObjList[index].target_url = GoogleLinkFormater(_this.find('a:eq(0)').attr('href'), true);
+            outObjList[index].target_img = GoogleLinkFixer(_this.find('a:eq(0) > img').attr('src'));
+
+            outObjList[index].map_url = validateData(_this.find('a:eq(1)').attr('href'));
+            outObjList[index].map_img = GoogleLinkFixer(_this.find('a:eq(1) > img').attr('src'));
         }
         else if (_this.find('span').hasClass('ul7Gbc')) {
             outObjList[index].rate = validateData(_this.find('.ul7Gbc').html());
@@ -129,13 +139,11 @@ function ParseDataGoogle(html, index) {
         }
         else if (_this.find('div').hasClass('NB2VS')) {
             outObjList[index].directions = validateData(_this.find('.NB2VS > a:eq(0)').attr('href'));
-            //outObjList[index].website = _this.find('.NB2VS > a:eq(1)').attr('href').split('/url?q=')[1].split('&sa=')[0];
-            outObjList[index].website = _this.find('.NB2VS > a:eq(1)').attr('href');
+            outObjList[index].website = GoogleLinkFormater(_this.find('.NB2VS > a:eq(1)').attr('href'));
         }
         else if (_this.find('div').hasClass('mraOPb')) {
             outObjList[index].wiki_description = validateData(_this.find('span').text());
-            //outObjList[index].wiki_link = _this.find('a:eq(0)').attr('href').split('/url?q=')[1].split('&sa=')[0];
-            outObjList[index].wiki_link = _this.find('a:eq(0)').attr('href');
+            outObjList[index].wiki_link = GoogleLinkFormater(_this.find('a:eq(0)').attr('href'));
         }
         else if (_this.find('div').hasClass('DjxOn')) {
             outObjList[index].description = validateData(_this.find('.DjxOn').text());
@@ -216,12 +224,31 @@ function ParseDataGoogle(html, index) {
     //console.log("[" + index + "] " + outObjList[index].description);
 
     console.log("[" + index + "] " + outObjList[index].i_name);
-    //writeFile(outputFolder + outObjList[index].i_name + ".html", html);
+    writeFile(outputFolder + outObjList[index].i_name + ".html", html);
     writeCsv(outputFolder + "Output.csv", outObjList);
 }
 
+function GoogleLinkFormater(data, clearOnlyTop = false) {
+    if (data == "" || data == null || data == undefined) {
+        data = noDataSign;
+    }
+    else {
+        if(data.includes('/url?q=')) data = data.split('/url?q=')[1];
+        if(data.includes('&sa=')) data = data.split('&sa=')[0];
+    }
+    return data;
+}
+
+function GoogleLinkFixer(data) {
+    data = validateData(data);
+    if (data != noDataSign && !data.includes("https://")) {
+        data = 'https://www.google.com' + data;
+    }
+    return data;
+}
+
 function validateData(data) {
-    return (data == "" || data == null) ? noDataSign : data;
+    return (data == "" || data == null || data == undefined) ? noDataSign : data;
 }
 
 function replaceAll(str, find, replace) {
